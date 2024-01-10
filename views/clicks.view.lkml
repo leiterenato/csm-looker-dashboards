@@ -33,6 +33,10 @@ view: clicks {
     type: number
     sql: ${TABLE}.target_clicks ;;
   }
+  measure: total_target_clicks {
+    type: sum
+    sql: ${target_clicks} ;;  }
+
   measure: count {
     type: count
   }

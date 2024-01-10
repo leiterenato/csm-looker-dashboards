@@ -33,6 +33,10 @@ view: predicted_ltv_value {
     type: number
     sql: ${TABLE}.ltv_value ;;
   }
+  measure: total_ltv_value {
+    type: sum
+    sql: ${ltv_value} ;;  }
+
   measure: count {
     type: count
   }

@@ -33,26 +33,42 @@ view: product_sales {
     type: number
     sql: ${TABLE}.online_out_of_stock ;;
   }
+  measure: total_online_out_of_stock {
+    type: sum
+    sql: ${online_out_of_stock} ;;  }
+
 
   dimension: online_sales {
     type: number
     sql: ${TABLE}.online_sales ;;
   }
+  measure: total_online_sales {
+    type: sum
+    sql: ${online_sales} ;;  }
 
   dimension: target_online_sales {
     type: number
     sql: ${TABLE}.target_online_sales ;;
   }
+  measure: total_target_online_sales {
+    type: sum
+    sql: ${target_online_sales} ;;  }
 
   dimension: target_total_sales {
     type: number
     sql: ${TABLE}.target_total_sales ;;
   }
+  measure: total_target_total_sales {
+    type: sum
+    sql: ${target_total_sales} ;;  }
 
   dimension: total_sales {
     type: number
     sql: ${TABLE}.total_sales ;;
   }
+  measure: total_total_sales {
+    type: sum
+    sql: ${total_sales} ;;  }
   measure: count {
     type: count
   }

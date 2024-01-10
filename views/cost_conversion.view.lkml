@@ -33,6 +33,10 @@ view: cost_conversion {
     type: number
     sql: ${TABLE}.target_cost_conversion ;;
   }
+  measure: total_target_cost_conversion {
+    type: sum
+    sql: ${target_cost_conversion} ;;  }
+
   measure: count {
     type: count
   }

@@ -36,4 +36,9 @@ view: conversions {
   measure: count {
     type: count
   }
+
+  measure: total_conversions {
+    type: sum
+    sql: ${conversions}  ;;  }
+
 }

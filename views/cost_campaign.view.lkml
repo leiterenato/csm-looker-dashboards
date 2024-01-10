@@ -33,6 +33,11 @@ view: cost_campaign {
     type: number
     sql: ${TABLE}.target_cost_campaign ;;
   }
+  measure: total_target_cost_campaign {
+    type: sum
+    sql: ${target_cost_campaign} ;;  }
+
+
   measure: count {
     type: count
   }

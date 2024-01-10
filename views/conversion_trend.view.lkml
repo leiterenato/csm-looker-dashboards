@@ -17,6 +17,10 @@ view: conversion_trend {
     type: number
     sql: ${TABLE}.conversions ;;
   }
+  measure: total_conversions {
+    type: sum
+    sql: ${conversions} ;;  }
+
 
   dimension: cost_per_conversion {
     type: number
@@ -30,6 +34,8 @@ view: conversion_trend {
   measure: total_cost_per_conversion {
     type: sum
     sql: ${cost_per_conversion} ;;  }
+
+
   measure: average_cost_per_conversion {
     type: average
     sql: ${cost_per_conversion} ;;  }

@@ -34,15 +34,25 @@ view: web_data {
     sql: ${TABLE}.avg_time_page_sec ;;
   }
 
+  measure: total_avg_time_page_sec {
+    type: sum
+    sql: ${avg_time_page_sec} ;;  }
+
   dimension: avg_unique_pageviews {
     type: number
     sql: ${TABLE}.avg_unique_pageviews ;;
   }
+  measure: total_avg_unique_pageviews {
+    type: sum
+    sql: ${avg_unique_pageviews} ;;  }
 
   dimension: total_sessions {
     type: number
     sql: ${TABLE}.total_sessions ;;
   }
+  measure: total_total_sessions {
+    type: sum
+    sql: ${total_sessions} ;;  }
   measure: count {
     type: count
   }
